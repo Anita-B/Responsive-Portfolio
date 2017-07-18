@@ -233,17 +233,30 @@ footer {
 /*************************** @Medias ***************************/
 @media (max-width: 980px){
 	/** Contents - About **/
-	#bio-text-image {
+	#bio-text-image, #portfolio-works, #contact-info {
 		width: 50%;
 	}
 	#bio-media {
     	width: 25%;
     }	
+    /** Contents - Portfolio **/
+	.portfolio-row {
+	    display: block;
+	    margin: 25px auto;
+	}
+	.portfolio-col { 
+		display: block;
+		width: 250px;
+		margin: 25px auto;
+	}
+	.portfolio-image {
+	    margin: 0 auto;
+	}
 }
 
 @media (max-width: 768px){
 	/** Contents - About **/
-	#bio-text-image {
+	#bio-text-image, #portfolio-works, #contact-info {
 		width: 75%;
 	}
 	#bio-media {
@@ -262,6 +275,19 @@ footer {
     }
     .col-sm-8 { 
 		padding-left: 35px;
+	}
+	/** Contents - Portfolio **/
+	.portfolio-row {
+	    display: block;
+	    margin: 25px auto;
+	}
+	.portfolio-col { 
+		display: block;
+		width: 250px;
+		margin: 25px auto;
+	}
+	.portfolio-image {
+	    margin: 0 auto;
 	}
 }
 

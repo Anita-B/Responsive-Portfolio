@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/*************************** Global declarations ***************************/
+/*************************** General ***************************/
 * {
     margin: 0;
     padding: 0;
@@ -16,12 +16,7 @@ body {
 	display: flex; /* flex box to force footer to the bottom to get a sticky footer */
   	flex-direction: column; /* flex box to force footer to the bottom to get a sticky footer */
 	height: 100vh; /* flex box to force footer to the bottom to get a sticky footer */
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2962ff+0,18ffff+100 */
-	background: #2962ff; /* Old browsers */
-	background: -webkit-linear-gradient(left, #2962ff 0%, #18ffff 100%);
-	background: -o-linear-gradient(left, #2962ff 0%, #18ffff 100%);
-	background: linear-gradient(to right, #2962ff 0%, #18ffff 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2962ff', endColorstr='#18ffff',GradientType=1 ); /* IE6-9 */
+	background: url("../images/crosswordp.png");
 }
 #container { 
 	flex: 1 0 auto; /* flex box to force footer to the bottom to get a sticky footer */
@@ -34,7 +29,7 @@ li>a:link, li>a:visited {
 }
 li>a:hover, li>a:active {
 	text-decoration: none;
-	color:#2962ff;
+	color:#ff5252;
 }
 #bio-text-image, #portfolio-works, #contact-info { border: 1px solid pink;
 	float: left;
@@ -209,7 +204,15 @@ input[type=submit] {
 	box-shadow: none;
 	padding: 15px 50px;
 	color: #fff;
-	background-color: #2962ff; /* Old browsers */
+	background-color: #ff5252; /* Old browsers */
+}
+input[type=submit]:hover, input[type=submit]:active {
+	margin-top: 20px;
+	border: none;
+	box-shadow: none;
+	padding: 15px 50px;
+	color: #fff;
+	background-color: #c50e29; /* Old browsers */
 }
 
 /*************************** Footer ****************************/
@@ -219,10 +222,94 @@ footer {
 	height: 80px;
 	background-color: #141122;
 	/* font style */
-	color: #18ffff;
+	color: #ff867f;
 	text-align: center;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 80px;
     font-weight: 300;
+}
+
+/*************************** @Medias ***************************/
+@media (max-width: 980px){
+	/** Contents - About **/
+	#bio-text-image {
+		width: 50%;
+	}
+	#bio-media {
+    	width: 25%;
+    }	
+}
+
+@media (max-width: 768px){
+	/** Contents - About **/
+	#bio-text-image {
+		width: 75%;
+	}
+	#bio-media {
+		float: left;
+    	width: 75%;
+    	margin: 75px 0 0 100px;
+    }
+    #icons-media {
+    	float: left;
+	    margin: 25px 30px 25px 50px;
+	}
+
+	.navbar-nav>li>a {
+    	padding-top: 34px;
+    	padding-bottom: 34px;
+    }
+    .col-sm-8 { 
+		padding-left: 35px;
+	}
+}
+
+@media (max-width: 640px){
+	/** Header **/
+	h1 {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	nav{
+		width: 100%;
+		height: 50px;
+		background-color: #fff;
+	}
+	nav ul { 
+		margin: 0 100px;
+		display: flex;
+  		justify-content: space-between;
+	}
+	nav ul li {
+		margin: 0;
+		padding: 0;
+		height: 50px;
+		line-height: 50px;
+	}
+	/** Contents - About **/
+	#bio-text-image, #portfolio-works, #contact-info {
+		float: none;
+		margin: 80px auto;
+		width: 75%;
+	}
+	#bio-media {
+    	float: none;
+    	width: 75%;
+    	margin: 0 auto ;
+	}
+	/** Contents - Portfolio **/
+	.portfolio-row {
+	    display: block;
+	    margin: 25px auto;
+	}
+	.portfolio-col { 
+		display: block;
+		width: 250px;
+		margin: 25px auto;
+	}
+	.portfolio-image {
+	    margin: 0 auto;
+	}
 }
